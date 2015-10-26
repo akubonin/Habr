@@ -1,0 +1,329 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ins",
+				"instance_variable_get"
+			],
+			[
+				"va",
+				"var_name"
+			],
+			[
+				"in",
+				"instance_variable_get"
+			],
+			[
+				"tra",
+				"trains"
+			],
+			[
+				"max",
+				"max_seats"
+			],
+			[
+				"la",
+				"last_station"
+			],
+			[
+				"fi",
+				"first_station"
+			],
+			[
+				"pr",
+				"produced_trains"
+			],
+			[
+				"sl",
+				"self"
+			],
+			[
+				"route",
+				"route_stations"
+			],
+			[
+				"station",
+				"station_index"
+			],
+			[
+				"sta",
+				"station_index"
+			],
+			[
+				"wa",
+				"waggon_id"
+			],
+			[
+				"pass",
+				"passenger_wagon_id"
+			],
+			[
+				"car",
+				"cargo_trains"
+			],
+			[
+				"ca",
+				"cargo_trains"
+			],
+			[
+				"fre",
+				"free_seats"
+			],
+			[
+				"trains",
+				"trains_of_type_2"
+			],
+			[
+				"arr",
+				"arrived_trains"
+			],
+			[
+				"even",
+				"even_count"
+			],
+			[
+				"gr",
+				"group_size"
+			],
+			[
+				"da",
+				"days_in_month_leap"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"mport urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/andreykubonin/my_habr",
+		"/Users/andreykubonin/my_habr/app",
+		"/Users/andreykubonin/my_habr/app/controllers",
+		"/Users/andreykubonin/my_habr/app/views",
+		"/Users/andreykubonin/my_habr/app/views/welcome",
+		"/Users/andreykubonin/my_habr/config"
+	],
+	"file_history":
+	[
+		"/Users/andreykubonin/my_habr/app/controllers/welcome_controller.rb",
+		"/Users/andreykubonin/my_habr/config/routes.rb",
+		"/Users/andreykubonin/my_habr/app/views/welcome/index.html.erb",
+		"/Users/andreykubonin/HomeW/bootstrap/untitled.html",
+		"/Users/andreykubonin/HomeW/bootstrap/WWV.html",
+		"/Users/andreykubonin/Downloads/Wild & Wacky Vegetables.html",
+		"/Users/andreykubonin/HomeW/Railway/waggon.rb",
+		"/Users/andreykubonin/HomeW/Railway/validation.rb",
+		"/Users/andreykubonin/HomeW/Railway/train.rb",
+		"/Users/andreykubonin/HomeW/Railway/station.rb",
+		"/Users/andreykubonin/HomeW/Railway/route.rb",
+		"/Users/andreykubonin/HomeW/Railway/produser_module.rb",
+		"/Users/andreykubonin/HomeW/Railway/main.rb",
+		"/Users/andreykubonin/HomeW/Railway/attr_module.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/produser_module.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/waggon.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/main.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/train.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/station.rb",
+		"/Users/andreykubonin/HomeW/ls6-7/route.rb",
+		"/Users/andreykubonin/HomeW/ls6/route.rb",
+		"/Users/andreykubonin/HomeW/ls6/waggon.rb",
+		"/Users/andreykubonin/HomeW/ls6/train.rb",
+		"/Users/andreykubonin/HomeW/ls6/station.rb",
+		"/Users/andreykubonin/HomeW/HW5/rail.rb",
+		"/Users/andreykubonin/HomeW/HW4/12.rb",
+		"/Users/andreykubonin/HomeW/HW4/11.rb",
+		"/Users/andreykubonin/HomeW/HW4/10.rb",
+		"/Users/andreykubonin/HomeW/HW4/09.rb",
+		"/Users/andreykubonin/HomeW/HW4/08.rb",
+		"/Users/andreykubonin/HomeW/HW4/05.rb",
+		"/Users/andreykubonin/HomeW/HW4/04.rb",
+		"/Users/andreykubonin/HomeW/HW4/03.rb",
+		"/Users/andreykubonin/HomeW/HW4/02.rb",
+		"/Users/andreykubonin/HomeW/HW4/07.rb",
+		"/Users/andreykubonin/HomeW/ls4/07.rb",
+		"/Users/andreykubonin/HomeW/ls4/06_date.rb",
+		"/Users/andreykubonin/HomeW/ls4/01_var4.rb",
+		"/Users/andreykubonin/HomeW/ls4/1_v3.rb",
+		"/Users/andreykubonin/HomeW/ls4/01_var2.rb",
+		"/Users/andreykubonin/HomeW/ls4/01.rb",
+		"/Users/andreykubonin/HomeW/HW02/06_D.rb",
+		"/Users/andreykubonin/HomeW/HW02/05_date.rb",
+		"/Users/andreykubonin/HomeW/HW02/03_04_triangle.rb",
+		"/Users/andreykubonin/HomeW/HW02/02_case.rb",
+		"/Users/andreykubonin/HomeW/HW02/01_odd.rb",
+		"/Users/andreykubonin/HomeW/HW02/03_triangle.rb",
+		"/Users/andreykubonin/ruby/conditins.rb",
+		"/Users/andreykubonin/ruby/HW01_local/ex04/ex04.rb",
+		"/Users/andreykubonin/ruby/HW01_local/ex03/ex03.rb",
+		"/Users/andreykubonin/ruby/HW01_local/ex02/ex02.rb",
+		"/Users/andreykubonin/ruby/HW01_local/Ex01/ex01.rb",
+		"/Users/andreykubonin/README.md",
+		"/Users/andreykubonin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "",
+	"project": "my_habr.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
