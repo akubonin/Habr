@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"cat",
+				"category"
+			],
+			[
+				"ca",
+				"Category"
+			],
+			[
+				"category",
+				"category_params"
+			],
+			[
 				"ins",
 				"instance_variable_get"
 			],
@@ -64,10 +76,6 @@
 				"cargo_trains"
 			],
 			[
-				"ca",
-				"cargo_trains"
-			],
-			[
 				"fre",
 				"free_seats"
 			],
@@ -95,6 +103,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "db/migrate/20151109191227_create_profiles.rb",
+			"settings":
+			{
+				"buffer_size": 194,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -140,16 +156,34 @@
 	[
 		"/Users/andreykubonin/my_habr",
 		"/Users/andreykubonin/my_habr/app",
-		"/Users/andreykubonin/my_habr/app/controllers",
-		"/Users/andreykubonin/my_habr/app/views",
-		"/Users/andreykubonin/my_habr/app/views/welcome",
-		"/Users/andreykubonin/my_habr/config"
+		"/Users/andreykubonin/my_habr/app/models",
+		"/Users/andreykubonin/my_habr/db",
+		"/Users/andreykubonin/my_habr/db/migrate"
 	],
 	"file_history":
 	[
-		"/Users/andreykubonin/my_habr/app/controllers/welcome_controller.rb",
+		"/Users/andreykubonin/my_habr/db/migrate/20151026191402_create_comments.rb",
+		"/Users/andreykubonin/my_habr/db/migrate/20151109201757_create_categories_posts.rb",
+		"/Users/andreykubonin/my_habr/db/migrate/20151026191246_create_posts.rb",
+		"/Users/andreykubonin/my_habr/db/migrate/20151109191227_create_profiles.rb",
+		"/Users/andreykubonin/my_habr/app/models/profile.rb",
+		"/Users/andreykubonin/my_habr/app/models/user.rb",
+		"/Users/andreykubonin/my_habr/app/models/category.rb",
+		"/Users/andreykubonin/my_habr/app/models/tag.rb",
+		"/Users/andreykubonin/my_habr/app/models/post.rb",
+		"/Users/andreykubonin/my_habr/app/models/comment.rb",
+		"/Users/andreykubonin/my_habr/app/views/categories/new.html.erb",
+		"/Users/andreykubonin/my_habr/app/views/categories/_form.html.erb",
+		"/Users/andreykubonin/my_habr/app/views/categories/destroy.html.erb",
+		"/Users/andreykubonin/my_habr/app/views/categories/index.html.erb",
+		"/Users/andreykubonin/my_habr/app/views/categories/edit.html.erb",
 		"/Users/andreykubonin/my_habr/config/routes.rb",
+		"/Users/andreykubonin/my_habr/app/controllers/categories_controller.rb",
+		"/Users/andreykubonin/my_habr/db/migrate/20151102155909_create_categories.rb",
+		"/Users/andreykubonin/my_habr/app/views/categories/show.html.erb",
 		"/Users/andreykubonin/my_habr/app/views/welcome/index.html.erb",
+		"/Users/andreykubonin/my_habr/app/controllers/comments_controller.rb",
+		"/Users/andreykubonin/my_habr/app/controllers/welcome_controller.rb",
 		"/Users/andreykubonin/HomeW/bootstrap/untitled.html",
 		"/Users/andreykubonin/HomeW/bootstrap/WWV.html",
 		"/Users/andreykubonin/Downloads/Wild & Wacky Vegetables.html",
@@ -204,7 +238,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -218,6 +252,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arti"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -235,14 +270,43 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "db/migrate/20151109191227_create_profiles.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -283,7 +347,7 @@
 	"project": "my_habr.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -321,7 +385,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 233.0,
+	"side_bar_width": 260.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
