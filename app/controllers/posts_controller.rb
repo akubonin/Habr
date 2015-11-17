@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :user_check, only: [:edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -25,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -66,6 +69,12 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+    end
+
+    def user_check
+      if current_user != @post.user
+        redirect_to post_path, notice: 'У вас нет прав на выполнение этого действия.'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

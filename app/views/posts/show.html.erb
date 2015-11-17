@@ -10,7 +10,12 @@
   <%= @post.categories_titles %>
 </p>
 
-
+<% if @post.user.present? %>
+  <p>
+    <strong>Автор:</strong>
+    <%= @post.user.email %>
+  </p>
+<% end %>
 
 <p>
   <strong>Body:</strong>
@@ -23,12 +28,19 @@
   <h3>Комментарии:</h3>
   <% @post.comments.each do |c|%>
     <p><%= c.body %></p>
-    <p><%= link_to "Удалить", c, method: :delete %></p>
+    <p>Автор: <%= c.user.email %></p>
+    <% if c.user == current_user%>
+      <p><%= link_to "Удалить", c, method: :delete %></p>
+    <% end %>
   <% end %>
 <% end %>
 
 <h4>Новый комментарий</h4>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<% if @post.user == current_user %>
+  <%= link_to 'Edit', edit_post_path(@post) %>
+|
+<% end %>
+
 <%= link_to 'Back', posts_path %>

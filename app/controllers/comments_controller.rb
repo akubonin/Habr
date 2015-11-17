@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_post, only: :create
+  before_action :user_check, only: [:edit, :update, :destroy]
 
   # GET /comments
   # GET /comments.json
@@ -25,9 +27,8 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-
     @comment = @post.comments.new(comment_params)
-
+    @comment.user = current_user
 
       if @comment.save
         redirect_to @post, notice: 'Comment was successfully created.'
@@ -58,6 +59,12 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
+    end
+
+    def user_check
+      if @comment.user != current_user
+        redirect_to post_path, notice: 'У вас нет прав на выполнение этого действия.'
+      end
     end
 
     def set_post

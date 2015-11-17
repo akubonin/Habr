@@ -3,4 +3,19 @@
   <%= @category.title %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @posts %>
+  </tbody>
+
+</table>
+
 <%= link_to 'Back', categories_path %>
