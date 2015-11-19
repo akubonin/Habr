@@ -72,7 +72,7 @@ class PostsController < ApplicationController
     end
 
     def user_check
-      if current_user != @post.user
+      unless current_user && current_user.id == @post.user_id || current_user.admin?
         redirect_to post_path, notice: 'У вас нет прав на выполнение этого действия.'
       end
     end

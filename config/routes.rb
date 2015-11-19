@@ -4,7 +4,12 @@ Rails.application.routes.draw do
     resources :comments, shallow: true
   end
 
-  resources :categories
+  resources :categories, only: [:show]
+
+  namespace :admin do
+    resources :categories
+    resources :users
+  end
 
   root 'welcome#index'
 

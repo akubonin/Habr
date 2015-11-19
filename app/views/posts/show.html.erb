@@ -26,11 +26,12 @@
   <p>Комментариев пока нет. Оставьте комментарий первым.</p>
   <% else %>
   <h3>Комментарии:</h3>
-  <% @post.comments.each do |c|%>
-    <p><%= c.body %></p>
-    <p>Автор: <%= c.user.email %></p>
-    <% if c.user == current_user%>
-      <p><%= link_to "Удалить", c, method: :delete %></p>
+  <% @post.comments.each do |comment|%>
+    <p><%= comment.body %></p>
+    <p>Автор: <%= comment.user.email %></p>
+    <% if current_user && current_user.id == comment.user_id || current_user.admin?%>
+      <p><%= link_to "Удалить", comment, method: :delete %></p>
+      <p><%= link_to "Редактировать", edit_comment_path(comment) %></p>
     <% end %>
   <% end %>
 <% end %>
@@ -38,7 +39,7 @@
 <h4>Новый комментарий</h4>
 <%= render 'comments/form' %>
 
-<% if @post.user == current_user %>
+<% if user_signed_in? && @post.user_id == current_user.id || current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_post_path(@post) %>
 |
 <% end %>

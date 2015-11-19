@@ -62,7 +62,7 @@ class CommentsController < ApplicationController
     end
 
     def user_check
-      if @comment.user != current_user
+      unless current_user && current_user.id == @comment.user_id || current_user.admin?
         redirect_to post_path, notice: 'У вас нет прав на выполнение этого действия.'
       end
     end
