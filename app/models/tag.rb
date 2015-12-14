@@ -1,3 +1,3 @@
 class Tag < ActiveRecord::Base
-  has many :posts
+  has_many :posts
 end
