@@ -10,6 +10,17 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+
+  config.action_mailer.default_url_options = { host: 'infinite-atoll-5697.herokuapp.com' }
+  config.action_mailer.smtp_settings = {
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'infinite-atoll-5697.herokuapp.com',
+    :authentication => :plain,
+  }
+  config.action_mailer.delivery_method = :smtp
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
