@@ -4,5 +4,11 @@ class Comment < ActiveRecord::Base
 
   validates :body, :post_id, :user_id, presence: true
 
+  after_save :send_notification
 
+private
+
+  def send_notification
+    NotificationMailer.comment_notification(post.user, post, self).deliver_now
+  end
 end

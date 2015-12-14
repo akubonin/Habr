@@ -1,0 +1,32 @@
+ru:
+  common:
+    back: "Назад"
+    edit: "Редактировать"
+    show: "Показать"
+    delete: "Удалить"
+    create: "Создать"
+    update: "Обновить"
+    email: "Почта"
+    subscribe: "Подписаться"
+    unsubscribe: "Отписаться"
+    publish: "Опубликовать"
+    unpublish: "Cнять с публикации"
+  posts:
+    form:
+      submit: "%{action} публикацию"
+    index:
+      title: "Список постов"
+      new_post: "Новая публикация"
+    edit:
+      title: "Редактирование публикации"
+    new:
+      title: "Новая публикация"
+  comments:
+    new:
+      title: "Новый комментарий"
+    index:
+      title: "Комментарии к посту"
+    edit:
+      title: "Редактирование комментария"
+    form:
+      submit: "%{action} комментарий"

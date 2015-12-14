@@ -7,7 +7,27 @@
     </h4>
   </td>
   <td><%= truncate(post.body, length:100) {link_to 'Читать далее', post} %></td>
-  <td><%= link_to 'Show', post %></td>
-  <td><%= link_to 'Edit', edit_post_path(post) %></td>
-  <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to t('common.show'), post %></td>
+  <% if post[:published] %>
+    <td><%= link_to t('common.unpublish'), unpublish_post_path(post) %></td>
+  <% else %>
+    <td><%= link_to t('common.publish'), publish_post_path(post) %></td>
+  <% end %>
+
+  <% if user_signed_in? %>
+      <% if current_user.author_of?(post) %>
+        <td>
+          <%= link_with_icon :pencil, edit_post_path(post), title: t('common.edit') %>
+        </td>
+        <td><%= link_with_icon 'trash-o', post, title: t('common.delete'), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      <td>
+        <% if current_user.subscribed_to?(post) %>
+          <%= link_to t('common.unsubscribe'), current_user.subscription_for(post), method: :delete %>
+        <% else %>
+          <%= link_to t('common.subscribe'), post_subscriptions_path(post), method: :post %>
+        <% end %>
+      </td>
+  <% end %>
 </tr>
+

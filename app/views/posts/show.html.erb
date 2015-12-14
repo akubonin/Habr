@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Заголовок:</strong>
   <%= @post.title %>
 </p>
 
@@ -30,8 +30,8 @@
     <p><%= comment.body %></p>
     <p>Автор: <%= comment.user.email %></p>
     <% if current_user && current_user.id == comment.user_id || current_user.admin?%>
-      <p><%= link_to "Удалить", comment, method: :delete %></p>
-      <p><%= link_to "Редактировать", edit_comment_path(comment) %></p>
+      <p><%= link_to t('common.delete'), comment, method: :delete %></p>
+      <p><%= link_with_icon :pencil, edit_comment_path(comment) %></p>
     <% end %>
   <% end %>
 <% end %>
@@ -40,8 +40,8 @@
 <%= render 'comments/form' %>
 
 <% if user_signed_in? && @post.user_id == current_user.id || current_user && current_user.admin? %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
+  <%= link_with_icon :pencil, edit_post_path(@post) %>
 |
 <% end %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to t('common.back'), posts_path %>

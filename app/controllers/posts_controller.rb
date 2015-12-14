@@ -1,32 +1,40 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
+  before_action :user_check, only: [:edit, :update, :destroy, :publish, :unpublish]
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :user_check, only: [:edit, :update, :destroy]
-
-  # GET /posts
-  # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.published.all
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
+  def unpublished
+    @posts = Post.unpublished.own_posts(current_user).all
+    render :index
+  end
+
+  def publish
+    @post[:published] = true
+    @post.save
+    redirect_to posts_path
+  end
+
+  def unpublish
+    @post[:published] = false
+    @post.save
+    redirect_to unpublished_posts_path
+  end
+
   def show
     @comment = Comment.new
   end
 
-  # GET /posts/new
   def new
     @post = Post.new
   end
 
-  # GET /posts/1/edit
   def edit
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post = current_user.posts.new(post_params)
 
@@ -41,8 +49,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -79,6 +85,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, category_ids: [])
+      params.require(:post).permit(:title, :body, :published, category_ids: [])
     end
 end

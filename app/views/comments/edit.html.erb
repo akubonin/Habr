@@ -1,6 +1,6 @@
-<h1>Editing Comment</h1>
+<h1><%= t('.title') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', post_path(@comment.post_id) %>
+<%= link_to t('common.show'), @comment %> |
+<%= link_to t('common.back'), post_path(@comment.post_id) %>
